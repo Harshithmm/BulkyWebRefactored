@@ -1,0 +1,49 @@
+﻿@model Category 
+
+@* bcz we need whole categry for this view  *@
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Create Category</h2>
+            <hr/>
+        </div>
+        @* for all validation summary below line is used *@
+        <div asp-validation-summary="All"></div>
+        @* for model only validation summary below line is used *@
+        <div asp-validation-summary="ModelOnly"></div>
+        <div class="mb-3 row p-1">
+            <label asp-for="Name" class="p-0"></label>   @* same for label no need to define  <label  class="p-0">Name</label>*@
+            <input asp-for="Name" class="form-control"/>  @*no need of type attribute bcz asp-for=Name where Name is the Name in the Category so it will know what type it is*@
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="DisplayOrder" class="p-0"></label>  @* used Display Order bcz no space was there in asp-for="DisplayOrder" *@
+            <input asp-for="DisplayOrder" class="form-control" />
+            <span asp-validation-for="DisplayOrder" class="text-danger"></span>
+        </div>
+
+        <div class="row">
+            <div class="col-6 col-md-3">
+                <button type="submit" class="btn btn-primary form-control" >Create</button>
+            </div>
+            <div class="col-6 col-md-3">
+                <a asp-controller="Category" asp-action="Index" class="btn btn-secondary border  form-control">
+                    Back to List
+                </a>
+            </div>
+        </div>
+        
+       
+    </div>
+</form>
+@* if we add this the browser will itself validate the for i.e. client side without going to the server and all the conditions are checked which 
+are defined in the Model not the controller hence it does not check for same value in both fieds as it is defined in the controller
+if we add the below code in the _Layout.cshtml then we dont have to add it in every view  *@
+@section Scripts{
+{
+<partial name="_ValidationScriptsPartial" /> @* this is used for validation and this is script related so we have to add the partial view here 
+    otherwise we could have added it in the _Layout.cshtml but we have to add it in every view so we have created a partial view for it and added it here
+*@
+}
+}
