@@ -57,3 +57,7 @@ for singleton,transient and scoped 4:45:00 in video
     internal class CategoryRepository : Repository<Category>, ICategoryRepository  //HERE Repository<Category> is used so that it doesnot show implement missing members
                                                                                    //error bcz of ICategoryRepository interface as it has been implemented in  Repository<Category> and  then 
                                                                                     //we get another error bcz Repository<Category> needs ApplicationDbContext context in its constructor
+
+
+@model Category 
+@*@model BulkyWeb.Models.Category or move _ViewImports.cshtml  if its the last commit and  error bcz it doesnot know where is the category as its defined in the _ViewImports.cshtml *@

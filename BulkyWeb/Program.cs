@@ -32,6 +32,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");     //Default is given to the Home Controller page here
+    pattern: "{area=Customer}/{controller=Home}/{action=Index}/{id?}");     //Default is given to the Home Controller page here and in {area:Customer} use = instead of :
 
 app.Run();
