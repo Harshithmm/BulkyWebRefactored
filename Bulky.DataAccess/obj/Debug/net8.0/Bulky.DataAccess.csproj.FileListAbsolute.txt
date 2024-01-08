@@ -1,0 +1,16 @@
+C:\Users\hamut\OneDrive - EG A S\Documents\Personal\youtube\BulkyWebRefactored\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.deps.json
+C:\Users\hamut\OneDrive - EG A S\Documents\Personal\youtube\BulkyWebRefactored\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.dll
+C:\Users\hamut\OneDrive - EG A S\Documents\Personal\youtube\BulkyWebRefactored\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.pdb
+C:\Users\hamut\OneDrive - EG A S\Documents\Personal\youtube\BulkyWebRefactored\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Models.dll
+C:\Users\hamut\OneDrive - EG A S\Documents\Personal\youtube\BulkyWebRefactored\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Models.pdb
+C:\Users\hamut\OneDrive - EG A S\Documents\Personal\youtube\BulkyWebRefactored\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.csproj.AssemblyReference.cache
+C:\Users\hamut\OneDrive - EG A S\Documents\Personal\youtube\BulkyWebRefactored\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hamut\OneDrive - EG A S\Documents\Personal\youtube\BulkyWebRefactored\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.AssemblyInfoInputs.cache
+C:\Users\hamut\OneDrive - EG A S\Documents\Personal\youtube\BulkyWebRefactored\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.AssemblyInfo.cs
+C:\Users\hamut\OneDrive - EG A S\Documents\Personal\youtube\BulkyWebRefactored\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\hamut\OneDrive - EG A S\Documents\Personal\youtube\BulkyWebRefactored\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.sourcelink.json
+C:\Users\hamut\OneDrive - EG A S\Documents\Personal\youtube\BulkyWebRefactored\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.csproj.CopyComplete
+C:\Users\hamut\OneDrive - EG A S\Documents\Personal\youtube\BulkyWebRefactored\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.dll
+C:\Users\hamut\OneDrive - EG A S\Documents\Personal\youtube\BulkyWebRefactored\Bulky.DataAccess\obj\Debug\net8.0\refint\Bulky.DataAccess.dll
+C:\Users\hamut\OneDrive - EG A S\Documents\Personal\youtube\BulkyWebRefactored\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.pdb
+C:\Users\hamut\OneDrive - EG A S\Documents\Personal\youtube\BulkyWebRefactored\Bulky.DataAccess\obj\Debug\net8.0\ref\Bulky.DataAccess.dll

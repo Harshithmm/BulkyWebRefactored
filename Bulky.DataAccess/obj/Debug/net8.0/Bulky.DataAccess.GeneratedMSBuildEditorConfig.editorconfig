@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Bulky.DataAccess
-build_property.ProjectDir = C:\Users\hamut\OneDrive - EG A S\Documents\Personal\youtube\Introduction to ASP.NET Core MVC (.NET 8)\BulkyWEB\Bulky\Bulky.DataAccess\
+build_property.ProjectDir = C:\Users\hamut\OneDrive - EG A S\Documents\Personal\youtube\BulkyWebRefactored\Bulky.DataAccess\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

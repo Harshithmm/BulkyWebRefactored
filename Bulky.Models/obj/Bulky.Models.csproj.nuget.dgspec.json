@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hamut\\OneDrive - EG A S\\Documents\\Personal\\youtube\\Introduction to ASP.NET Core MVC (.NET 8)\\BulkyWEB\\Bulky\\Bulky.Models\\Bulky.Models.csproj": {}
+    "C:\\Users\\hamut\\OneDrive - EG A S\\Documents\\Personal\\youtube\\BulkyWebRefactored\\Bulky.Models\\Bulky.Models.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hamut\\OneDrive - EG A S\\Documents\\Personal\\youtube\\Introduction to ASP.NET Core MVC (.NET 8)\\BulkyWEB\\Bulky\\Bulky.Models\\Bulky.Models.csproj": {
+    "C:\\Users\\hamut\\OneDrive - EG A S\\Documents\\Personal\\youtube\\BulkyWebRefactored\\Bulky.Models\\Bulky.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hamut\\OneDrive - EG A S\\Documents\\Personal\\youtube\\Introduction to ASP.NET Core MVC (.NET 8)\\BulkyWEB\\Bulky\\Bulky.Models\\Bulky.Models.csproj",
+        "projectUniqueName": "C:\\Users\\hamut\\OneDrive - EG A S\\Documents\\Personal\\youtube\\BulkyWebRefactored\\Bulky.Models\\Bulky.Models.csproj",
         "projectName": "Bulky.Models",
-        "projectPath": "C:\\Users\\hamut\\OneDrive - EG A S\\Documents\\Personal\\youtube\\Introduction to ASP.NET Core MVC (.NET 8)\\BulkyWEB\\Bulky\\Bulky.Models\\Bulky.Models.csproj",
+        "projectPath": "C:\\Users\\hamut\\OneDrive - EG A S\\Documents\\Personal\\youtube\\BulkyWebRefactored\\Bulky.Models\\Bulky.Models.csproj",
         "packagesPath": "C:\\Users\\hamut\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hamut\\OneDrive - EG A S\\Documents\\Personal\\youtube\\Introduction to ASP.NET Core MVC (.NET 8)\\BulkyWEB\\Bulky\\Bulky.Models\\obj\\",
+        "outputPath": "C:\\Users\\hamut\\OneDrive - EG A S\\Documents\\Personal\\youtube\\BulkyWebRefactored\\Bulky.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

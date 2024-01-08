@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "79pIZ+ZzSmIe65UiPoxrb7LgzffaDCynur0SMcgcPQ5kCQJ3IKMsegFSZ3Wv91u1jeVrfmg58XDa2KoAazeX2w==",
+  "dgSpecHash": "h3+mXxDV6tTyT54XaN2kco+2gyEeHEujLNPlUNtzxMFJG6XbtmIgqqY4L+vlaq9bDKtKgB4BG+kFAOZe5f7jhA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hamut\\OneDrive - EG A S\\Documents\\Personal\\youtube\\Introduction to ASP.NET Core MVC (.NET 8)\\BulkyWEB\\Bulky\\BulkyWebRazor_Temp\\BulkyWebRazor_Temp.csproj",
+  "projectFilePath": "C:\\Users\\hamut\\OneDrive - EG A S\\Documents\\Personal\\youtube\\BulkyWebRefactored\\BulkyWebRazor_Temp\\BulkyWebRazor_Temp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hamut\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\hamut\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

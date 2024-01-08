@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Cx6rIofy5Z4mBGJHOu9neztyqbQKUgc0TbdTN8GPEFyu1K4PqtFflGUwY1pK1bQbdeXTmqM5ZEqiX+MwoIwQwA==",
+  "dgSpecHash": "yuc5fxtAbKvLrtHSEBLm27VKZp26BgY0iYsJbVeQVCqpjbAAWpnNbO/mSwsu0VFhFbBalu6sv/efumFTOp04xw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hamut\\OneDrive - EG A S\\Documents\\Personal\\youtube\\Introduction to ASP.NET Core MVC (.NET 8)\\BulkyWEB\\Bulky\\Bulky.Models\\Bulky.Models.csproj",
+  "projectFilePath": "C:\\Users\\hamut\\OneDrive - EG A S\\Documents\\Personal\\youtube\\BulkyWebRefactored\\Bulky.Models\\Bulky.Models.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

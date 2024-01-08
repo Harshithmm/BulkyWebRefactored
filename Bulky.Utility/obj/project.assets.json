@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hamut\\OneDrive - EG A S\\Documents\\Personal\\youtube\\Introduction to ASP.NET Core MVC (.NET 8)\\BulkyWEB\\Bulky\\Bulky.Utility\\Bulky.Utility.csproj",
+      "projectUniqueName": "C:\\Users\\hamut\\OneDrive - EG A S\\Documents\\Personal\\youtube\\BulkyWebRefactored\\Bulky.Utility\\Bulky.Utility.csproj",
       "projectName": "Bulky.Utility",
-      "projectPath": "C:\\Users\\hamut\\OneDrive - EG A S\\Documents\\Personal\\youtube\\Introduction to ASP.NET Core MVC (.NET 8)\\BulkyWEB\\Bulky\\Bulky.Utility\\Bulky.Utility.csproj",
+      "projectPath": "C:\\Users\\hamut\\OneDrive - EG A S\\Documents\\Personal\\youtube\\BulkyWebRefactored\\Bulky.Utility\\Bulky.Utility.csproj",
       "packagesPath": "C:\\Users\\hamut\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hamut\\OneDrive - EG A S\\Documents\\Personal\\youtube\\Introduction to ASP.NET Core MVC (.NET 8)\\BulkyWEB\\Bulky\\Bulky.Utility\\obj\\",
+      "outputPath": "C:\\Users\\hamut\\OneDrive - EG A S\\Documents\\Personal\\youtube\\BulkyWebRefactored\\Bulky.Utility\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

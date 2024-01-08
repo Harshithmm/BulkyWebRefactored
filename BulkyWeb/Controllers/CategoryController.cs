@@ -1,14 +1,15 @@
-﻿using BulkyWeb.Data;
+﻿using Bulky.DataAccess.Repository.IRepository;
+using BulkyWeb.Data;
 using BulkyWeb.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BulkyWeb.Controllers
 {
-    public class CategoryController(ApplicationDbContext context) : Controller
+    public class CategoryController(ICategoryRepository categoryRepository) : Controller
     {
         public IActionResult Index()
         {
-            var categoryList = context.Categories.ToList();
+            var categoryList = categoryRepository.GetAll().ToList();
             return View(categoryList);
         }
 
@@ -29,8 +30,8 @@ namespace BulkyWeb.Controllers
 
             if (ModelState.IsValid) /*it checks Range and MaxLength is Valid or not and display error on create.cshml using <span asp-validation-for="Name" class="text-danger"></span>*/
             {
-                context.Categories.Add(category);
-                context.SaveChanges();
+                categoryRepository.Add(category);
+                categoryRepository.Save();
                 TempData["success"]= "Category created successfully"; //TempData is used to display message on the same page after redirecting to another page
                 return RedirectToAction("Index", "Category"); //redirecting to index action of category controller ,can skip "category" as it is the same controller
 
@@ -46,7 +47,7 @@ namespace BulkyWeb.Controllers
             {
                 return NotFound();
             }
-            var categoryToEdit=context.Categories.Find(id);  //Find() is used to find for only primary key
+            var categoryToEdit=categoryRepository.Get(c=>c.Id==id);  //Find() is used to find for only primary key
             if (categoryToEdit == null)
             {
                 return NotFound();
@@ -65,8 +66,8 @@ namespace BulkyWeb.Controllers
 
             if (ModelState.IsValid) /*it checks Range and MaxLength is Valid or not and display error on create.cshml using <span asp-validation-for="Name" class="text-danger"></span>*/
             {
-                context.Categories.Update(category);
-                context.SaveChanges();
+               categoryRepository.Update(category);
+                categoryRepository.Save();
                 TempData["success"] = "Category updated successfully"; //TempData is used to display message on the same page after redirecting to another page
 
                 return
@@ -82,25 +83,20 @@ namespace BulkyWeb.Controllers
             {
                 return NotFound();
             }
-            var categoryToEdit = context.Categories.Find(id);  //Find() is used to find for only primary key
-            if (categoryToEdit == null)
+            var categoryToDelete = categoryRepository.Get(c=>c.Id==id);  //Find() is used to find for only primary key
+            if (categoryToDelete == null)
             {
                 return NotFound();
             }
-            return View(categoryToEdit); // OR return View(new Category);   no need to specify as the comiler will itself craete a new object of Category in the model of create.cshtml
+            return View(categoryToDelete); // OR return View(new Category);   no need to specify as the comiler will itself craete a new object of Category in the model of create.cshtml
         }
 
         [HttpPost, ActionName("Delete")]
-        public IActionResult DeletePOST(int? id) //if we put Delete then name are same hence we need to put ActionName("Delete") so that form
+        public IActionResult DeletePOST(Category category) //if we put Delete then name are same hence we need to put ActionName("Delete") so that form
         //will treat DeletePost method as Delete
         {
-            var categoryToEdit = context.Categories.Find(id);  //Find() is used to find for only primary key
-            if (categoryToEdit == null)
-            {
-                return NotFound();
-            }
-            context.Categories.Remove(categoryToEdit);
-            context.SaveChanges();
+            categoryRepository.Remove(category);
+            categoryRepository.Save();
             TempData["success"] = "Category deleted successfully"; //TempData is used to display message on the same page after redirecting to another page
 
             return RedirectToAction("Index", "Category");

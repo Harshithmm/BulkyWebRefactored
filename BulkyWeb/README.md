@@ -51,3 +51,9 @@ where NOTE:<td> should have c# code to display obj.Name hence @ is USED.
 [DisplayName("Category Name")]   //USED FOR CLIENT SIDE DISPLAY OF NAMES used in category/index.cshtml in asp-for=Name here it will display the DisplayName value
 
 return RedirectToAction("Index","Category");  //redirecting to index action of category controller
+
+for singleton,transient and scoped 4:45:00 in video
+
+    internal class CategoryRepository : Repository<Category>, ICategoryRepository  //HERE Repository<Category> is used so that it doesnot show implement missing members
+                                                                                   //error bcz of ICategoryRepository interface as it has been implemented in  Repository<Category> and  then 
+                                                                                    //we get another error bcz Repository<Category> needs ApplicationDbContext context in its constructor
