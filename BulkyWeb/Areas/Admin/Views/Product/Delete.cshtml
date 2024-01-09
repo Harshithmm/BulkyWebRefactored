@@ -4,7 +4,7 @@
 
 <form method="post">
     <input asp-for="Id" hidden/>
-    <div class="border p-3 mt-4">
+    <div class="border p-3 my-4">
         <div class="row pb-2">
             <h2 class="text-primary">Delete Product</h2>
             <hr/>
@@ -15,8 +15,8 @@
             <input asp-for="Title" disabled="" class="form-control" />  @*no need of type attribute bcz asp-for=Name where Name is the Name in the Product so it will know what type it is*@
         </div>
         <div class="mb-3 row p-1">
-            <label asp-for="Description" class="p-0"></label>  @* used Display Order bcz no space was there in asp-for="DisplayOrder" *@
-            <input asp-for="Description" disabled="" class="form-control" />
+            <label asp-for="Description" class="p-0"></label> @* used Display Order bcz no space was there in asp-for="DisplayOrder" *@
+            <textarea asp-for="Description" disabled="" class="form-control border-0 shadow"></textarea>
         </div>
         <div class="mb-3 row p-1">
             <label asp-for="ISBN" class="p-0"></label>  @* used Display Order bcz no space was there in asp-for="DisplayOrder" *@
