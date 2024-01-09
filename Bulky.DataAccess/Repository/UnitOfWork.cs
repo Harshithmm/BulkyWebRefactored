@@ -12,6 +12,7 @@ namespace Bulky.DataAccess.Repository
     {
         private readonly ApplicationDbContext _context;
         public ICategoryRepository Category { get; }
+
         public IProductRepository Product { get; }
 
         public UnitOfWork(ApplicationDbContext context)

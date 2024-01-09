@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Bulky.Models.Models;
+using BulkyWeb.Models;
 
 namespace Bulky.DataAccess.Repository.IRepository
 {

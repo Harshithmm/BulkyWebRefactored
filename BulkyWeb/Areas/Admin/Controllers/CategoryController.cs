@@ -32,7 +32,7 @@ namespace BulkyWeb.Areas.Admin.Controllers
             if (ModelState.IsValid) /*it checks Range and MaxLength is Valid or not and display error on create.cshml using <span asp-validation-for="Name" class="text-danger"></span>*/
             {
                 unitOfWork.Category.Add(category);
-                unitOfWork.Category.Save();
+                unitOfWork.Save();
                 TempData["success"] = "Category created successfully"; //TempData is used to display message on the same page after redirecting to another page
                 return RedirectToAction("Index", "Category"); //redirecting to index action of category controller ,can skip "category" as it is the same controller
 
@@ -68,7 +68,7 @@ namespace BulkyWeb.Areas.Admin.Controllers
             if (ModelState.IsValid) /*it checks Range and MaxLength is Valid or not and display error on create.cshml using <span asp-validation-for="Name" class="text-danger"></span>*/
             {
                 unitOfWork.Category.Update(category);
-                unitOfWork.Category.Save();
+                unitOfWork.Save();
                 TempData["success"] = "Category updated successfully"; //TempData is used to display message on the same page after redirecting to another page
 
                 return
@@ -97,7 +97,7 @@ namespace BulkyWeb.Areas.Admin.Controllers
         //will treat DeletePost method as Delete
         {
             unitOfWork.Category.Remove(category);
-            unitOfWork.Category.Save();
+            unitOfWork.Save();
             TempData["success"] = "Category deleted successfully"; //TempData is used to display message on the same page after redirecting to another page
 
             return RedirectToAction("Index", "Category");

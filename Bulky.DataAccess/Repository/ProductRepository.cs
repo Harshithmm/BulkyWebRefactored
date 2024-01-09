@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Bulky.DataAccess.Repository.IRepository;
-using Bulky.Models.Models;
 using BulkyWeb.Data;
+using BulkyWeb.Models;
 
 namespace Bulky.DataAccess.Repository
 {
@@ -13,7 +13,7 @@ namespace Bulky.DataAccess.Repository
     {
         public void Update(Product product)
         {
-            context.Products.Update(product);
+            context.Update(product);
         }
     }
 }
