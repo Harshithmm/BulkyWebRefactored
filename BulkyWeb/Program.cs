@@ -11,7 +11,9 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
        options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection" )));
 
-builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();  //ICategoryRepository is the interface and CategoryRepository is the class which implements the interface
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();  //IUnitOfWork is the interface and UnitOfWork is the class which implements the interface
+//builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+//ICategoryRepository is the interface and CategoryRepository is the class which implements the interface
 
 var app = builder.Build();
 

@@ -6,11 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 namespace BulkyWeb.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class CategoryController(ICategoryRepository categoryRepository) : Controller
+    public class CategoryController(IUnitOfWork unitOfWork) : Controller
     {
         public IActionResult Index()
         {
-            var categoryList = categoryRepository.GetAll().ToList();
+            var categoryList = unitOfWork.Category.GetAll().ToList();
             return View(categoryList);
         }
 
@@ -31,8 +31,8 @@ namespace BulkyWeb.Areas.Admin.Controllers
 
             if (ModelState.IsValid) /*it checks Range and MaxLength is Valid or not and display error on create.cshml using <span asp-validation-for="Name" class="text-danger"></span>*/
             {
-                categoryRepository.Add(category);
-                categoryRepository.Save();
+                unitOfWork.Category.Add(category);
+                unitOfWork.Category.Save();
                 TempData["success"] = "Category created successfully"; //TempData is used to display message on the same page after redirecting to another page
                 return RedirectToAction("Index", "Category"); //redirecting to index action of category controller ,can skip "category" as it is the same controller
 
@@ -48,7 +48,7 @@ namespace BulkyWeb.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            var categoryToEdit = categoryRepository.Get(c => c.Id == id);  //Find() is used to find for only primary key
+            var categoryToEdit = unitOfWork.Category.Get(c => c.Id == id);  //Find() is used to find for only primary key
             if (categoryToEdit == null)
             {
                 return NotFound();
@@ -67,8 +67,8 @@ namespace BulkyWeb.Areas.Admin.Controllers
 
             if (ModelState.IsValid) /*it checks Range and MaxLength is Valid or not and display error on create.cshml using <span asp-validation-for="Name" class="text-danger"></span>*/
             {
-                categoryRepository.Update(category);
-                categoryRepository.Save();
+                unitOfWork.Category.Update(category);
+                unitOfWork.Category.Save();
                 TempData["success"] = "Category updated successfully"; //TempData is used to display message on the same page after redirecting to another page
 
                 return
@@ -84,7 +84,7 @@ namespace BulkyWeb.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            var categoryToDelete = categoryRepository.Get(c => c.Id == id);  //Find() is used to find for only primary key
+            var categoryToDelete = unitOfWork.Category.Get(c => c.Id == id);  //Find() is used to find for only primary key
             if (categoryToDelete == null)
             {
                 return NotFound();
@@ -96,8 +96,8 @@ namespace BulkyWeb.Areas.Admin.Controllers
         public IActionResult DeletePOST(Category category) //if we put Delete then name are same hence we need to put ActionName("Delete") so that form
         //will treat DeletePost method as Delete
         {
-            categoryRepository.Remove(category);
-            categoryRepository.Save();
+            unitOfWork.Category.Remove(category);
+            unitOfWork.Category.Save();
             TempData["success"] = "Category deleted successfully"; //TempData is used to display message on the same page after redirecting to another page
 
             return RedirectToAction("Index", "Category");
