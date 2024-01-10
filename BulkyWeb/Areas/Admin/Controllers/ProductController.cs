@@ -1,7 +1,9 @@
 ﻿using Bulky.DataAccess.Repository.IRepository;
+using Bulky.Models.ViewModels;
 using BulkyWeb.Data;
 using BulkyWeb.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace BulkyWeb.Areas.Admin.Controllers
 {
@@ -11,29 +13,54 @@ namespace BulkyWeb.Areas.Admin.Controllers
         public IActionResult Index()
         {
             var categoryList = unitOfWork.Product.GetAll().ToList();
+           
             return View(categoryList);
         }
 
         public IActionResult Create()
         {
+            IEnumerable<SelectListItem> categoryDropDown = unitOfWork.Category.GetAll().Select(c => new SelectListItem
+            {
+                Text = c.Name,
+                Value = c.Id.ToString()
+            });
+            //                  //OR
+            //ViewBag.CategoryDropDown = categoryDropDown;
+            //                    //OR            
+            //ViewData["CategoryList"]= categoryDropDown;
+            //                    //OR
+            ProductVM productVM = new ProductVM
+            {
+                Product = new Product(),
+                CategoryList =categoryDropDown
+            };
             return
-                View(); // OR return View(new Product);   no need to specify as the comiler will itself craete a new object of Product in the model of create.cshtml
+                View(productVM); // OR return View(new Product);   no need to specify as the compiler will itself create a new object of Product in the model of create.cshtml
         }
 
         [HttpPost]
-        public IActionResult Create(Product product)
+        public IActionResult Create(ProductVM obj)
         {
 
-            if (ModelState.IsValid) /*it checks Range and MaxLength is Valid or not and display error on create.cshml using <span asp-validation-for="Name" class="text-danger"></span>*/
+            if (ModelState.IsValid) /*it checks Range and MaxLength is Valid or not and display error on create.cshtml using <span asp-validation-for="Name" class="text-danger"></span>*/
             {
-                unitOfWork.Product.Add(product);
+                unitOfWork.Product.Add(obj.Product);
                 unitOfWork.Save();
                 TempData["success"] = "Product created successfully"; //TempData is used to display message on the same page after redirecting to another page
                 return RedirectToAction("Index", "Product"); //redirecting to index action of product controller ,can skip "product" as it is the same controller
 
             }
 
-            return View();
+            ProductVM productVM = new ProductVM
+            {
+                Product = new Product(),
+                CategoryList = unitOfWork.Category.GetAll().Select(c => new SelectListItem
+                {
+                    Text = c.Name,
+                    Value = c.Id.ToString()
+                })
+            };
+            return View(productVM);
         }
 
 

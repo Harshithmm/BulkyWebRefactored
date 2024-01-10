@@ -61,3 +61,38 @@ for singleton,transient and scoped 4:45:00 in video
 
 @model Category 
 @*@model BulkyWeb.Models.Category or move _ViewImports.cshtml  if its the last commit and  error bcz it doesnot know where is the category as its defined in the _ViewImports.cshtml *@
+
+
+
+******************************************************************************************************************************
+
+USE VIEWBAG AND VIEWDATA TO DISPLAY DROPDOWN LIST IN CREATE.CSHTML
+
+         Using ViewBag
+        <div class="mb-3 row p-1">
+            <label asp-for="Product.CategoryId" class="p-0"></label> @* used Display Order bcz no space was there in asp-for="DisplayOrder" *@
+
+            <select asp-for="Product.CategoryId" asp-items="ViewBag.CategoryDropDown" class="form-select border-0 shadow">
+                @* ViewBag name should be same*@
+                <option disabled selected>--Select Category--</option>
+            </select>
+            <span asp-validation-for="Product.CategoryId" class="text-danger"></span>
+        </div>
+        Using ViewData
+        <div class="mb-3 row p-1">
+            <label asp-for="Product.CategoryId" class="p-0"></label> @* used Display Order bcz no space was there in asp-for="DisplayOrder" *@
+
+            <select asp-for="Product.CategoryId" asp-items="@ViewData["CategoryList"] as IEnumerable<SelectListItem>" class="form-select border-0 shadow">
+                @* ViewBag name should be same*@
+                <option disabled selected>--Select Category--</option>
+            </select>
+            <span asp-validation-for="Product.CategoryId" class="text-danger"></span>
+        </div>
+
+
+
+        IN PRODUCT CONTROLLER 
+
+                    ViewBag.CategoryDropDown = categoryDropDown;
+                                //OR            
+            ViewData["CategoryList"]= categoryDropDown;

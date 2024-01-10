@@ -1,4 +1,4 @@
-﻿@model Product 
+﻿@model ProductVM
 @*@model BulkyWeb.Models.Product or move _ViewImports.cshtml  if its the last commit and  error bcz it doesnot know where is the category as its defined in the _ViewImports.cshtml *@
 
 @* bcz we need whole categry for this view  *@
@@ -14,44 +14,60 @@
         @* for model only validation summary below line is used *@
         <div asp-validation-summary="ModelOnly"></div>
         <div class="mb-3 row p-1">
-            <label asp-for="Title" class="p-0"></label>   @* same for label no need to define  <label  class="p-0">Name</label>*@
-            <input asp-for="Title" class="form-control"/>  @*no need of type attribute bcz asp-for=Name where Name is the Name in the Product so it will know what type it is*@
-            <span asp-validation-for="Title" class="text-danger"></span>
+            <label asp-for="Product.Title" class="p-0"></label>   @* same for label no need to define  <label  class="p-0">Name</label>*@
+            <input asp-for="Product.Title" class="form-control" />  @*no need of type attribute bcz asp-for=Name where Name is the Name in the Product so it will know what type it is*@
+            <span asp-validation-for="Product.Title" class="text-danger"></span>
         </div>
         <div class="mb-3 row p-1">
-            <label asp-for="Description" class="p-0"></label>  @* used Display Order bcz no space was there in asp-for="DisplayOrder" *@
-            <input asp-for="Description" class="form-control" />
-            <span asp-validation-for="Description" class="text-danger"></span>
+            <label asp-for="Product.Description" class="p-0"></label>  @* used Display Order bcz no space was there in asp-for="DisplayOrder" *@
+            <input asp-for="Product.Description" class="form-control" />
+            <span asp-validation-for="Product.Description" class="text-danger"></span>
         </div>
         <div class="mb-3 row p-1">
-            <label asp-for="ISBN" class="p-0"></label>  @* used Display Order bcz no space was there in asp-for="DisplayOrder" *@
-            <input asp-for="ISBN" class="form-control" />
-            <span asp-validation-for="ISBN" class="text-danger"></span>
+            <label asp-for="Product.ISBN" class="p-0"></label>  @* used Display Order bcz no space was there in asp-for="DisplayOrder" *@
+            <input asp-for="Product.ISBN" class="form-control" />
+            <span asp-validation-for="Product.ISBN" class="text-danger"></span>
         </div>
         <div class="mb-3 row p-1">
-            <label asp-for="Author" class="p-0"></label>  @* used Display Order bcz no space was there in asp-for="DisplayOrder" *@
-            <input asp-for="Author" class="form-control" />
-            <span asp-validation-for="Author" class="text-danger"></span>
+            <label asp-for="Product.Author" class="p-0"></label>  @* used Display Order bcz no space was there in asp-for="DisplayOrder" *@
+            <input asp-for="Product.Author" class="form-control" />
+            <span asp-validation-for="Product.Author" class="text-danger"></span>
         </div> 
         <div class="mb-3 row p-1">
-            <label asp-for="ListPrice" class="p-0"></label>  @* used Display Order bcz no space was there in asp-for="DisplayOrder" *@
-            <input asp-for="ListPrice" class="form-control" />
-            <span asp-validation-for="ListPrice" class="text-danger"></span>
+            <label asp-for="Product.ListPrice" class="p-0"></label>  @* used Display Order bcz no space was there in asp-for="DisplayOrder" *@
+            <input asp-for="Product.ListPrice" class="form-control" />
+            <span asp-validation-for="Product.ListPrice" class="text-danger"></span>
         </div>
         <div class="mb-3 row p-1">
-            <label asp-for="Price" class="p-0"></label>  @* used Display Order bcz no space was there in asp-for="DisplayOrder" *@
-            <input asp-for="Price" class="form-control" />
-            <span asp-validation-for="Price" class="text-danger"></span>
+            <label asp-for="Product.Price" class="p-0"></label>  @* used Display Order bcz no space was there in asp-for="DisplayOrder" *@
+            <input asp-for="Product.Price" class="form-control" />
+            <span asp-validation-for="Product.Price" class="text-danger"></span>
         </div>
         <div class="mb-3 row p-1">
-            <label asp-for="Price50" class="p-0"></label>  @* used Display Order bcz no space was there in asp-for="DisplayOrder" *@
-            <input asp-for="Price50" class="form-control" />
-            <span asp-validation-for="Price50" class="text-danger"></span>
+            <label asp-for="Product.Price50" class="p-0"></label>  @* used Display Order bcz no space was there in asp-for="DisplayOrder" *@
+            <input asp-for="Product.Price50" class="form-control" />
+            <span asp-validation-for="Product.Price50" class="text-danger"></span>
         </div>
         <div class="mb-3 row p-1">
-            <label asp-for="Price100" class="p-0"></label>  @* used Display Order bcz no space was there in asp-for="DisplayOrder" *@
-            <input asp-for="Price100" class="form-control" />
-            <span asp-validation-for="Price100" class="text-danger"></span>
+            <label asp-for="Product.Price100" class="p-0"></label>  @* used Display Order bcz no space was there in asp-for="DisplayOrder" *@
+            <input asp-for="Product.Price100" class="form-control" />
+            <span asp-validation-for="Product.Price100" class="text-danger"></span>
+        </div>
+        Using ViewModel
+        <div class="mb-3 row p-1">
+            <label asp-for="Product.CategoryId" class="p-0"></label> @* used Display Order bcz no space was there in asp-for="DisplayOrder" *@
+
+            <select asp-for="@Model.Product.CategoryId" asp-items="@Model.CategoryList" class="form-select border-0 shadow">
+                @* ViewBag name should be same*@
+                <option disabled selected>--Select Category--</option>
+            </select>
+            <span asp-validation-for="Product.CategoryId" class="text-danger"></span>
+        </div>
+
+       <div class="mb-3 row p-1">
+            <label asp-for="Product.ImageUrl" class="p-0"></label>  @* used Display Order bcz no space was there in asp-for="DisplayOrder" *@
+            <input asp-for="Product.ImageUrl" class="form-control" />
+            <span asp-validation-for="Product.ImageUrl" class="text-danger"></span>
         </div>
 
         <div class="row">

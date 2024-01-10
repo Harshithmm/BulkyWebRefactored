@@ -10,3 +10,4 @@ C:\Users\hamut\OneDrive - EG A S\Documents\Personal\youtube\BulkyWebRefactored\B
 C:\Users\hamut\OneDrive - EG A S\Documents\Personal\youtube\BulkyWebRefactored\Bulky.Models\obj\Debug\net8.0\refint\Bulky.Models.dll
 C:\Users\hamut\OneDrive - EG A S\Documents\Personal\youtube\BulkyWebRefactored\Bulky.Models\obj\Debug\net8.0\Bulky.Models.pdb
 C:\Users\hamut\OneDrive - EG A S\Documents\Personal\youtube\BulkyWebRefactored\Bulky.Models\obj\Debug\net8.0\ref\Bulky.Models.dll
+C:\Users\hamut\OneDrive - EG A S\Documents\Personal\youtube\BulkyWebRefactored\Bulky.Models\obj\Debug\net8.0\Bulky.Models.csproj.AssemblyReference.cache

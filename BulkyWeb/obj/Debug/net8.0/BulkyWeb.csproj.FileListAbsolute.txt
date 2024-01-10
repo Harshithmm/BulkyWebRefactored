@@ -394,3 +394,6 @@ C:\Users\hamut\OneDrive - EG A S\Documents\Personal\youtube\BulkyWebRefactored\B
 C:\Users\hamut\OneDrive - EG A S\Documents\Personal\youtube\BulkyWebRefactored\BulkyWeb\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 C:\Users\hamut\OneDrive - EG A S\Documents\Personal\youtube\BulkyWebRefactored\BulkyWeb\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\hamut\OneDrive - EG A S\Documents\Personal\youtube\BulkyWebRefactored\BulkyWeb\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\Users\hamut\OneDrive - EG A S\Documents\Personal\youtube\BulkyWebRefactored\BulkyWeb\obj\Debug\net8.0\BulkyWeb.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\hamut\OneDrive - EG A S\Documents\Personal\youtube\BulkyWebRefactored\BulkyWeb\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\hamut\OneDrive - EG A S\Documents\Personal\youtube\BulkyWebRefactored\BulkyWeb\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
