@@ -96,3 +96,14 @@ USE VIEWBAG AND VIEWDATA TO DISPLAY DROPDOWN LIST IN CREATE.CSHTML
                     ViewBag.CategoryDropDown = categoryDropDown;
                                 //OR            
             ViewData["CategoryList"]= categoryDropDown;
+
+
+
+******************************************************************************************************************************
+
+<form method="post" class="row" enctype="multipart/form-data">          @* enctype="multipart/form-data" is used for uploading the image otherwise it won't work*@
+
+******************************************************************************************************************************
+
+            <h2 class="text-primary"> @(Model.Product.Id!=0?"Update":"Create")Create Product</h2>
+used to display create or update based on the id of the product dynamically
