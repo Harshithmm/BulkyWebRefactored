@@ -13,7 +13,16 @@
         <div asp-validation-summary="All"></div>
         @* for model only validation summary below line is used *@
         <div asp-validation-summary="ModelOnly"></div>
+
         <input asp-for="Product.Id" hidden/>
+<input asp-for="Product.ImageUrl" hidden/>
+        <div class="row">
+            <div class="col-10"></div>
+            <div class="col-2">
+                <div class="border p-3"></div>
+                <img src="@Model.Product.ImageUrl" width="100%" style="border-radius: 5px;border:1px solid white;"/>
+            </div>
+        </div>
         <div class="mb-3 row p-1">
             <label asp-for="Product.Title" class="p-0"></label>   @* same for label no need to define  <label  class="p-0">Name</label>*@
             <input asp-for="Product.Title" class="form-control" />  @*no need of type attribute bcz asp-for=Name where Name is the Name in the Product so it will know what type it is*@
@@ -67,7 +76,7 @@
 
        <div class="mb-3 row p-1">
             <label asp-for="Product.ImageUrl" class="p-0"></label>  @* used Display Order bcz no space was there in asp-for="DisplayOrder" *@
-            <input type="file" asp-for="Product.ImageUrl" class="form-control" />
+            <input type="file" name="file" asp-for="Product.ImageUrl" class="form-control" />   @* name="file" is used for uploading the image otherwise it won't work *@
             <span asp-validation-for="Product.ImageUrl" class="text-danger"></span>
         </div>
 

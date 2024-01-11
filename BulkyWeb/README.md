@@ -107,3 +107,7 @@ USE VIEWBAG AND VIEWDATA TO DISPLAY DROPDOWN LIST IN CREATE.CSHTML
 
             <h2 class="text-primary"> @(Model.Product.Id!=0?"Update":"Create")Create Product</h2>
 used to display create or update based on the id of the product dynamically
+
+******************************************************************************************************************************
+
+public class ProductController(IUnitOfWork unitOfWork,IWebHostEnvironment webHostEnvironment) : Controller   //using dependency injection webHostEnvironment is used to get the path of wwwroot folder
