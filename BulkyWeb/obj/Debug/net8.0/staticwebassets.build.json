@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XH0xHNsLGe4t0alzlJ1KttkXDq3LlSFkSCPHGPn1zHY=",
+  "Hash": "DWWLsH+FBGDMBCW45cRdBn/bYlNbvFRYI2RxxuLxFg4=",
   "Source": "BulkyWeb",
   "BasePath": "_content/BulkyWeb",
   "Mode": "Default",
@@ -414,6 +414,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\Product\\f9cfabe1-bd4b-4adc-9549-9267e797cc04.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\hamut\\OneDrive - EG A S\\Documents\\Personal\\youtube\\BulkyWebRefactored\\BulkyWeb\\wwwroot\\js\\product.js",
+      "SourceId": "BulkyWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hamut\\OneDrive - EG A S\\Documents\\Personal\\youtube\\BulkyWebRefactored\\BulkyWeb\\wwwroot\\",
+      "BasePath": "_content/BulkyWeb",
+      "RelativePath": "js/product.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\product.js"
     },
     {
       "Identity": "C:\\Users\\hamut\\OneDrive - EG A S\\Documents\\Personal\\youtube\\BulkyWebRefactored\\BulkyWeb\\wwwroot\\js\\site.js",

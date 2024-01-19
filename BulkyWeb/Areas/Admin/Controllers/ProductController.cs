@@ -12,9 +12,9 @@ namespace BulkyWeb.Areas.Admin.Controllers
     {
         public IActionResult Index()
         {
-            var categoryList = unitOfWork.Product.GetAll(includeProperties:"Category").ToList();
+            var productList = unitOfWork.Product.GetAll(includeProperties:"Category").ToList();  // the name ""Category"" should be same as in Repository.cs
            
-            return View(categoryList);
+            return View(productList);
         }
 
         public IActionResult Upsert(int? id)         //for update and create  
@@ -115,5 +115,16 @@ namespace BulkyWeb.Areas.Admin.Controllers
 
             return RedirectToAction("Index", "Product");
         }
+
+        #region API CALLS
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            var productList = unitOfWork.Product.GetAll(includeProperties: "Category").ToList();
+            return Json(new { data = productList });
+        }
+
+
+        #endregion
     }
 }

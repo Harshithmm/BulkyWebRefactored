@@ -115,3 +115,23 @@ public class ProductController(IUnitOfWork unitOfWork,IWebHostEnvironment webHos
 ******************************************************************************************************************************
 
         public IActionResult Upsert(ProductVM productVM,IFormFile? file)  //here file should have same name as in upsert.cshtml  name="file" and IFormFile is used to upload image
+
+******************************************************************************************************************************
+
+function loadDataTable() {
+    dataTable = $('#tblData').DataTable({
+        "ajax": { url: '/Admin/Product/GetAll' },
+        "columns": [
+            { data: 'title',"width":"15%" },
+            { data: 'isbn', "width": "15%" },
+            { data: 'price', "width": "15%" },
+            { data: 'author', "width": "15%" }
+        ]
+    });
+}
+
+
+IN THIS the data : 'title' should be same as the name in the JSON object that is returned from the controller
+
+can see it through /Admin/Product/GetAll
+

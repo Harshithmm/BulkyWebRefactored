@@ -73,6 +73,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\hamut\\OneDrive - EG A S\\Documents\\Personal\\youtube\\BulkyWebRefactored\\BulkyWeb\\wwwroot\\js\\product.js",
+      "PackagePath": "staticwebassets\\js\\product.js"
+    },
+    {
       "Id": "C:\\Users\\hamut\\OneDrive - EG A S\\Documents\\Personal\\youtube\\BulkyWebRefactored\\BulkyWeb\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
