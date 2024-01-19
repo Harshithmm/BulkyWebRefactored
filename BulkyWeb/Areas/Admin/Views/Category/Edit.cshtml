@@ -8,6 +8,7 @@
             <h2 class="text-primary">Edit Category</h2>
             <hr />
         </div>
+
         @* for all validation summary below line is used *@
         <div asp-validation-summary="All"></div>
         @* for model only validation summary below line is used *@
@@ -38,8 +39,8 @@
     </div>
 </form>
 @* if we add this the browser will itself validate the for i.e. client side without going to the server and all the conditions are checked which
-are defined in the Model not the controller hence it does not check for same value in both fieds as it is defined in the controller
-if we add the below code in the _Layout.cshtml then we dont have to add it in every view  *@
+are defined in the Model not the controller hence it does not check for same value in both fields as it is defined in the controller
+if we add the below code in the _Layout.cshtml then we don't have to add it in every view  *@
 @section Scripts {
     {
     <partial name="_ValidationScriptsPartial" /> @* this is used for validation and this is script related so we have to add the partial view here

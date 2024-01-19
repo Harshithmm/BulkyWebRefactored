@@ -111,3 +111,7 @@ used to display create or update based on the id of the product dynamically
 ******************************************************************************************************************************
 
 public class ProductController(IUnitOfWork unitOfWork,IWebHostEnvironment webHostEnvironment) : Controller   //using dependency injection webHostEnvironment is used to get the path of wwwroot folder
+
+******************************************************************************************************************************
+
+        public IActionResult Upsert(ProductVM productVM,IFormFile? file)  //here file should have same name as in upsert.cshtml  name="file" and IFormFile is used to upload image

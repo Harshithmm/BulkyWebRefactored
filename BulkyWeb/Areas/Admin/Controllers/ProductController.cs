@@ -12,7 +12,7 @@ namespace BulkyWeb.Areas.Admin.Controllers
     {
         public IActionResult Index()
         {
-            var categoryList = unitOfWork.Product.GetAll().ToList();
+            var categoryList = unitOfWork.Product.GetAll(includeProperties:"Category").ToList();
            
             return View(categoryList);
         }
@@ -29,7 +29,7 @@ namespace BulkyWeb.Areas.Admin.Controllers
             //                    //OR            
             //ViewData["CategoryList"]= categoryDropDown;
             //                    //OR
-            ProductVM productVM = new ProductVM
+            ProductVM productVM = new()
             {
                 Product = new Product(),
                 CategoryList =categoryDropDown
@@ -43,7 +43,7 @@ namespace BulkyWeb.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public IActionResult Upsert(ProductVM productVM,IFormFile? file)
+        public IActionResult Upsert(ProductVM productVM,IFormFile? file)  //here file should have same name as in upsert.cshtml  name="file" and IFormFile is used to upload image
         {
             string webRootPath = webHostEnvironment.WebRootPath; //getting the path of wwwroot folder
             if (file != null)
@@ -93,7 +93,7 @@ namespace BulkyWeb.Areas.Admin.Controllers
 
         public IActionResult Delete(int? id)
         {
-            if (id == null || id == 0)
+            if (id is null or 0)
             {
                 return NotFound();
             }

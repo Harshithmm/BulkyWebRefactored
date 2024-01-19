@@ -11,9 +11,6 @@ namespace Bulky.DataAccess.Repository
 {
     public class ProductRepository(ApplicationDbContext context) : Repository<Product>(context), IProductRepository
     {
-        public void Update(Product product)
-        {
-            context.Update(product);
-        }
+        public void Update(Product product) => context.Update(product);
     }
 }
